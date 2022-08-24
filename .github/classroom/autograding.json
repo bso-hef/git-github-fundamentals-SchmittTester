@@ -3,7 +3,7 @@
     {
       "name": "finished file with text finished",
       "setup": "",
-      "run": "validate-assignment.yml",
+      "run": "",
       "input": "",
       "output": "",
       "comparison": "included",
