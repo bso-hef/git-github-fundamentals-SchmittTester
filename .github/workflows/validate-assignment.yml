@@ -37,7 +37,7 @@ jobs:
     
       - name: regex match file action
         # uses: noahreinalter/regex-match-file@36449ffda98590cf58e63c57c98b6d4f4ad264da
-        uses: noahreinalter/regex-match-file@v1.6
+        uses: noahreinalter/regex-match-file@v1.7
         with:
           # search regex pattern
           regex_pattern: finished
