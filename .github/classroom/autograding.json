@@ -3,12 +3,12 @@
     {
       "name": "finished file with text finished",
       "setup": "",
-      "run": "file contains \"finished\"",
+      "run": "validate-assignment.yml",
       "input": "",
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": null
+      "points": 2
     }
   ]
 }
