@@ -1,0 +1,45 @@
+# This is a workflow to validate the fullfillment of the assignment
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on pull request events for the "main" branch
+  pull_request:
+    branches: [ "main" ]
+    
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+
+      - name: File exists action
+        # You may pin to the exact commit or the version.
+        # uses: jiangxin/file-exists-action@81a413fe02b9d9c4737c01bf2f566e12735a3285
+        uses: jiangxin/file-exists-action@v1.0.1
+        with:
+          # Repository name with owner. For example, jiangxin/file-exists-action
+          repository: ${{ github.repository }}
+          # The branch, tag or SHA to search the file path
+          ref: dev 
+          # File path to find in the repository
+          path: finished.md
+          # Expected type of file in the repository
+          # type: # optional, default is file
+          # Personal access token (PAT) used to access GitHub API
+          # token: # optional, default is ${{ github.token }}
+    
+      - name: regex match file action
+        # uses: noahreinalter/regex-match-file@36449ffda98590cf58e63c57c98b6d4f4ad264da
+        uses: noahreinalter/regex-match-file@1.6
+        with:
+          # search regex pattern
+          regex_pattern: finished
+          # path of the file to search
+          path: finished.md
