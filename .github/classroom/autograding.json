@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "finished file with text finished",
+      "setup": "",
+      "run": "file contains \"finished\"",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    }
+  ]
+}
